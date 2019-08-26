@@ -1,0 +1,23 @@
+<html charset='utf-8'>
+    <head>
+        <meta charset="utf-8"/>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="index.css"></script>
+    </head>
+
+    <body>
+      <div id="app">
+        <div v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }">
+          Hello World
+        </div>
+      </div>
+
+      <div id="app-1">
+        <div v-bind:style="[baseStyles, overridingStyles]">
+          Hello World
+        </div>
+      </div>
+      <script src="index.js"></script>
+    </body>
+
+</html>

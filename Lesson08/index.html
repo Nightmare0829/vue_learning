@@ -1,0 +1,37 @@
+<html charset='utf-8'>
+    <head>
+        <meta charset="utf-8"/>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="index.css"></script>
+    </head>
+
+    <body>
+      <div id="app">
+          <h1 v-if="awesome">Vue is awesome!</h1>
+          <h1 v-else>Oh no 😢</h1>
+      </div>
+
+      <div id="app-1">
+        <div v-if="type === 'A'">
+            A
+        </div>
+        <div v-else-if="type === 'B'">
+          B
+        </div>
+        <div v-else-if="type === 'C'">
+          C
+        </div>
+        <div v-else>
+          Not A/B/C
+        </div>
+      </div>
+      <div class="ui-tipbox-icon">
+        <i class="iconfont" title="成功">&#xF046;</i>
+      </div>
+     
+      <a href="./alice.html"> alice </a>
+
+      <script src="index.js"></script>
+    </body>
+
+</html>

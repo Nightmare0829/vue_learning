@@ -1,0 +1,51 @@
+<html charset='utf-8'>
+    <head>
+        <meta charset="utf-8"/>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="index.css"></script>
+      </head>
+
+    <body>
+      <div id="app">
+          <div v-bind:class="{ class: isActive }"></div>
+          <div class="static"
+               v-bind:class="{ active: isActive, 'text-danger': hasError }"
+          ></div>
+      </div>
+      <div id="app-1">
+          <!-- 由以下几种方式定义类的类型 -->
+          <div v-bind:class="classObject"></div>
+          <div v-bind:class="[activeClass, errorClass]"></div>
+          <div v-bind:class="[isActive ? activeClass : '', errorClass]"></div>
+          <div v-bind:class="[{ active: isActive }, errorClass]"></div>
+      </div>
+
+      <div>
+        <ul id="example-1">
+          <li v-for="item in items">
+            {{ item.message }}
+          </li>
+        </ul>
+      </div>
+      
+      <div>
+        <ul id="example-2">
+              <li v-for="(item, index) in items">
+                {{ parentMessage }} - {{ index }} - {{ item.message }}
+              </li>
+            </ul>
+      </div>
+
+      <div>
+        <ul id="v-for-object" class="demo">
+            <li v-for="value in object">
+              {{ value }}
+            </li>
+        </ul>
+      </div>
+      
+      <script src="index.js"></script>
+    </body>
+
+
+</html>

@@ -1,0 +1,31 @@
+<html charset='utf-8'>
+    <head>
+        <meta charset="utf-8"/>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+
+    <body>
+        <div id="app">
+            <!-- 参数调用 -->
+            <p>Original message: "{{message}}"</p>
+            <!-- 方式一 -->
+            <p>reversed message: "{{message.split('').reverse().join('')}}"</p>
+            <!-- 方式二 -->
+            <p>Computed reversed message: "{{ reversedMessage }}"</p>
+            <!-- 方式三 -->
+            <p>Computed reversed message function: "{{ reversedMessageFunc() }}"</p>
+
+            <!-- 方式二与方式三的区别 -->
+            <p>Computed reversed message: "{{ reversedMessage }}"</p>
+            <p>Computed reversed message function: "{{ reversedMessageFunc() }}"</p>
+
+        </div>
+
+        <div id="app-1">
+            {{ fullName }}
+        </div>
+
+        <script src="index.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,58 @@
+<html charset='utf-8'>
+    <head>
+        <meta charset="utf-8"/>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+
+    <body>
+        <div id="app">
+            <span>
+                信息 : {{msg + 1}} <br>
+                {{msg <= 25? 'yes': 'no'}} <br>
+                <!-- <p v-if="seen">
+                    现在你能看到我了
+                </p> -->
+
+            </span>
+            <br>
+            <span v-once>
+                这条信息不会改变 : {{msg}}
+            </span>
+
+            <a v-bind:href="url">百度</a>
+            <a v-on:click="onClick">click Me</a>
+            <button v-on:click="onClick">
+                    click Me
+            </button>
+            <form action="/register" v-on:submit.prevent="onSubmit">
+                <button type="submit">
+                        You submit me!
+                </button>
+
+            </form>
+        </div>
+
+        <div id="app-1">
+            <span>
+                Using mustaches : {{ rawHtml }}
+            </span>
+
+            <p>
+                Using v-html directive: <span v-html="rawHtml"></span>
+            </p>
+        </div>
+
+        <div id="app-2">
+           <div v-bind:id="dynamicId">
+                header
+           </div>
+            <br>
+           <button v-bind:disabled="isButtonDisabled">
+               Button
+            </button>
+        </div>
+
+        <script src="index.js"></script>
+    </body>
+
+</html>
